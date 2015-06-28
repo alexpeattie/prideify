@@ -1,10 +1,10 @@
-<center>![prideify.js](https://raw.github.com/alexpeattie/prideify/master/logo.png)</center>
+<p align='center'>![prideify.js](https://raw.github.com/alexpeattie/prideify/master/logo.png)</p>
 
 Inspired by [facebook.com/celebratepride](https://facebook.com/celebratepride) - a super-lightweight library (< 100 lines of code) to “prideify” any image using the <canvas> element. Licensed under MIT.
 
 There are no external dependencies, although it does integrate with jQuery when it's present :relaxed:.
 
-<center>![Example image](https://raw.github.com/alexpeattie/prideify/master/example.png)</center>
+<p align='center'>![Example image](https://raw.github.com/alexpeattie/prideify/master/example.png)</p>
 
 ## Live Demo
 
