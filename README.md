@@ -4,6 +4,8 @@ Inspired by [facebook.com/celebratepride](https://facebook.com/celebratepride) -
 
 There are no external dependencies, although it does integrate with jQuery when it's present :relaxed:.
 
+![Example image](https://raw.github.com/alexpeattie/prideify/master/example.png)
+
 ## Live Demo
 
 #### <http://alexpeattie.com/projects/prideify>
@@ -36,7 +38,7 @@ There are no external dependencies, although it does integrate with jQuery when 
 
 ### More examples
 
-If you call Prideify without any arguments, any image with the data-prideify attribute set will be processed:
+If you call Prideify without any arguments, any image with the `data-prideify` attribute set will be processed:
 
 ~~~html
 <img src='/jenny.jpg' data-pridefied>
@@ -45,7 +47,7 @@ If you call Prideify without any arguments, any image with the data-prideify att
 </script>
 ~~~
 
-If you are trying to call Prideify with an image not hosted on your server, you'll probably need to set the crossOriginProxy option to true, to avoid browser restrictions regarding the canvas element (see more under 'Configuration options'):
+If you are trying to call Prideify with an image not hosted on your server, you'll probably need to set the `crossOriginProxy` option to true, to avoid browser restrictions regarding the canvas element (see more under [Configuration options](#configuration-options)):
 
 ~~~html
 <img src='http://example.com/jenny.jpg'>
@@ -53,13 +55,13 @@ If you are trying to call Prideify with an image not hosted on your server, you'
   Prideify('img', { crossOriginProxy: true });
 </script>
 ~~~
-By default Prideify will add a CSS class 'prideify' after the image is rendered. You can use a different CSS class by setting the renderedClass option:
+By default Prideify will add a CSS class 'prideify' after the image is rendered. You can use a different CSS class by setting the `renderedClass` option:
 
 ~~~js
 Prideify('img', { renderedClass: 'some-custom-class' });
 ~~~
 
-If you want something to happen after the image has been rendered, you can use the afterRender option. The newly rendered image will be passed into the callback function:
+If you want something to happen after the image has been rendered, you can use the `afterRender` option. The newly rendered image will be passed into the callback function:
 
 ~~~js
 Prideify('#jenny', { afterRender: function(image) {
@@ -89,7 +91,7 @@ Pridefy(target, [options]);
 
 The image or collection of images you want to prideify. Alternatively you can pass a selector, in which case anything matching the selector will be prideified.
 
-If left blank, all images with data-prideify attributes (e.g. it defaults to the CSS selector '[data-prideify]').
+If left blank, all images with `data-prideify` attributes (e.g. it defaults to the CSS selector `'[data-prideify]'`).
 
 <hr>
 
@@ -107,7 +109,7 @@ Additional configuration options - see below.
 <h6>Default: 'prideified'</h6>
 *Type: String*
 
-A class that will be added the the <img> element after the image has been rendered successfully.
+A class that will be added the the `<img>` element after the image has been rendered successfully.
 
 <hr>
 
@@ -115,9 +117,9 @@ A class that will be added the the <img> element after the image has been render
 <h6>Default: false</h6>
 *Type: Boolean or string*
 
-Due to browser restrictions, you won't be able to use prideify normally with most image that are not hosted on your domain (unless the image host has been kind enough to set to *). You can learn more about cross-origin security and the <canvas> in this MDN article.
+Due to browser restrictions, you won't be able to use prideify normally with most image that are not hosted on your domain (unless the image host has been kind enough to set to *). You can learn more about cross-origin security and the `<canvas>` in this MDN article.
 
-Setting `crossOriginProxy` to true will load the image via http://crossorigin.me, thereby avoid cross-origin restrictions. If you want to use a different proxy, you can pass it's URL as a string.
+Setting `crossOriginProxy` to true will load the image via <http://crossorigin.me>, thereby avoid cross-origin restrictions. If you want to use a different proxy, you can pass it's URL as a string.
 
 <hr>
 
@@ -125,7 +127,7 @@ Setting `crossOriginProxy` to true will load the image via http://crossorigin.me
 <h6>Default: undefined</h6>
 *Type: Array of arrays*
 
-If you don't want to use the default colors, or want extra or fewer stripes, you can set use a customStripes array. This is a nested array of arrays, each containing the RGB values of each stripe:
+If you don't want to use the default colors, or want extra or fewer stripes, you can set use a `customStripes` array. This is a nested array of arrays, each containing the RGB values of each stripe:
 
 ~~~js
 Prideify('.profile-pic', { 
@@ -141,4 +143,4 @@ Better error handling :innocent:
 
 ### Credits
 
-Thanks to Facebook and the LGBT community for the inspiration and to @technoboy10 for the awesome CORS proxy.
+Thanks to Facebook and the LGBT community for the inspiration and to @technoboy10 for the awesome CORS proxy. Example photo credit [Jose Antonio Navas](https://www.flickr.com/photos/joseanavas/5984942462)
