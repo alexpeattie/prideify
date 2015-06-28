@@ -135,6 +135,14 @@ Prideify('.profile-pic', {
 });
 ~~~
 
+<hr>
+
+**afterRender**
+<h6>Default: undefined</h6>
+*Type: Function*
+
+A callback function that will run after the image has been rendered. The new image will be passed as the sole argument to the callback function.
+
 The above would overlay two stripes - a black one, and a white one - admittedly not very exciting!
 
 ## Todo
