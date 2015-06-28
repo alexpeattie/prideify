@@ -1,5 +1,5 @@
 <p align='center'>
-  <img src='https://raw.github.com/alexpeattie/prideify/master/logo.png'>
+  <a href='http://alexpeattie.com/projects/prideify' target='_blank'><img src='https://raw.github.com/alexpeattie/prideify/master/logo.png'></a>
 </p>
 
 Inspired by [facebook.com/celebratepride](https://facebook.com/celebratepride) - a super-lightweight library (< 100 lines of code) to “prideify” any image using the <canvas> element. Licensed under MIT.
