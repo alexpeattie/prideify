@@ -15,6 +15,9 @@ There are no external dependencies, although it does integrate with jQuery when 
 #### <http://alexpeattie.com/projects/prideify>
 
 ## Usage
+
+The library does its magic using the `<canvas>` API - no trickery with CSS semi-transparent `<div>`s or anything like that :smile:. After being processed, the image is turned back to a normal `<img>` element.
+
 ### Quickstart
 
 ~~~html
