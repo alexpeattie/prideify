@@ -1,10 +1,10 @@
-![prideify.js](https://raw.github.com/alexpeattie/prideify/master/logo.png)
+<center>![prideify.js](https://raw.github.com/alexpeattie/prideify/master/logo.png)</center>
 
 Inspired by [facebook.com/celebratepride](https://facebook.com/celebratepride) - a super-lightweight library (< 100 lines of code) to “prideify” any image using the <canvas> element. Licensed under MIT.
 
 There are no external dependencies, although it does integrate with jQuery when it's present :relaxed:.
 
-![Example image](https://raw.github.com/alexpeattie/prideify/master/example.png)
+<center>![Example image](https://raw.github.com/alexpeattie/prideify/master/example.png)</center>
 
 ## Live Demo
 
@@ -55,7 +55,7 @@ If you are trying to call Prideify with an image not hosted on your server, you'
   Prideify('img', { crossOriginProxy: true });
 </script>
 ~~~
-By default Prideify will add a CSS class 'prideify' after the image is rendered. You can use a different CSS class by setting the `renderedClass` option:
+By default Prideify will add a CSS class `'prideify'` after the image is rendered. You can use a different CSS class by setting the `renderedClass` option:
 
 ~~~js
 Prideify('img', { renderedClass: 'some-custom-class' });
@@ -117,9 +117,9 @@ A class that will be added the the `<img>` element after the image has been rend
 <h6>Default: false</h6>
 *Type: Boolean or string*
 
-Due to browser restrictions, you won't be able to use prideify normally with most image that are not hosted on your domain (unless the image host has been kind enough to set to *). You can learn more about cross-origin security and the `<canvas>` in this MDN article.
+Due to browser restrictions, you won't be able to use prideify normally with most image that are not hosted on your domain (unless the image host has been kind enough to set `Access-Control-Allow-Origin` to `*`). You can learn more about cross-origin security and the `<canvas>` in [this MDN article](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image).
 
-Setting `crossOriginProxy` to true will load the image via <http://crossorigin.me>, thereby avoid cross-origin restrictions. If you want to use a different proxy, you can pass it's URL as a string.
+Setting `crossOriginProxy` to true will load the image via <http://crossorigin.me>, thereby avoid cross-origin restrictions. If you want to use a different proxy, you can pass its URL as a string.
 
 <hr>
 
@@ -135,6 +135,8 @@ Prideify('.profile-pic', {
 });
 ~~~
 
+The above would overlay two stripes - a black one, and a white one - admittedly not very exciting!
+
 <hr>
 
 **afterRender**
@@ -143,12 +145,10 @@ Prideify('.profile-pic', {
 
 A callback function that will run after the image has been rendered. The new image will be passed as the sole argument to the callback function.
 
-The above would overlay two stripes - a black one, and a white one - admittedly not very exciting!
-
 ## Todo
 
 Better error handling :innocent:
 
 ### Credits
 
-Thanks to Facebook and the LGBT community for the inspiration and to @technoboy10 for the awesome CORS proxy. Example photo credit [Jose Antonio Navas](https://www.flickr.com/photos/joseanavas/5984942462)
+Thanks to Facebook and the LGBT community for the inspiration and to @technoboy10 for the awesome CORS proxy. Example photo credit [Jose Antonio Navas](https://www.flickr.com/photos/joseanavas/5984942462).
