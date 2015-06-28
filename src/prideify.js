@@ -7,7 +7,7 @@ var Prideify = function(target, options) {
 
     if(window.jQuery && target.jquery) images = jQuery.makeArray(target);
     if(typeof target === 'string') {
-      elements = document.querySelectorAll(target) 
+      var elements = document.querySelectorAll(target) 
       images = Array.prototype.slice.call(elements)
     }
 
@@ -79,7 +79,7 @@ Prideify.prototype.addRainbow = function (image) {
 }
 
 Prideify.prototype.addStripe = function (image, stripeNum) {
-  var stripes = this.options.customStripes || this.stripes
+  var stripes = this.options.customStripes || this.stripes;
   var stripeHeight = image.height / stripes.length;
 
   var offSetY = stripeNum * stripeHeight;
