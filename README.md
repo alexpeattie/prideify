@@ -151,8 +151,14 @@ A callback function that will run after the image has been rendered. The new ima
 
 ## Todo
 
-Better error handling :innocent:
+Better error handling :innocent:, bookmarklet.
 
 ### Credits
 
 Thanks to Facebook and the LGBT community for the inspiration and to @technoboy10 for the awesome CORS proxy. Example photo credit [Jose Antonio Navas](https://www.flickr.com/photos/joseanavas/5984942462).
+
+Sent into the world with the blessing of [Peg](http://peg.co/) :grinning:.
+
+<p align='center'>
+  <a href='http://peg.co' target='_blank'><img src='https://raw.github.com/alexpeattie/prideify/master/peg.png'></a>
+</p>
