@@ -84,7 +84,6 @@ Prideify.prototype.addRainbow = function (image) {
 }
 
 Prideify.prototype.addStripe = function (image, stripeNum) {
-  var stripes = this.stripes;
   var stripeThickness = this._stripeThickness(image);
   var stripePosition = stripeNum * stripeThickness;
   var stripeColor = this.stripes[stripeNum].join(', ')
