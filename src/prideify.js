@@ -16,6 +16,7 @@ var Prideify = function(target, options) {
     })
   } else {
     this.options = options;
+    this.stripes = this.options.customStripes || this.defaultStripes;
     this.options.renderedClass = this.options.renderedClass || 'prideified';
 
     this.prideifyImage(target);
@@ -63,7 +64,7 @@ Prideify.prototype.render = function(image) {
   return imageSrc;
 };
 
-Prideify.prototype.stripes = [
+Prideify.prototype.defaultStripes = [
   [255, 62, 24],
   [252, 154, 0],
   [255, 216, 0],
@@ -77,17 +78,17 @@ Prideify.prototype.removeCanvas = function () {
 };
 
 Prideify.prototype.addRainbow = function (image) {
-  for (var stripeNum = 0; stripeNum < 6; stripeNum++) {
+  for (var stripeNum = 0; stripeNum < this.stripes.length; stripeNum++) {
     this.addStripe(image, stripeNum)
   }
 }
 
 Prideify.prototype.addStripe = function (image, stripeNum) {
-  var stripes = this.options.customStripes || this.stripes;
   var stripeHeight = image.height / stripes.length;
 
   var offSetY = stripeNum * stripeHeight;
   var stripeColor = stripes[stripeNum].join(', ')
+  var stripes = this.stripes;
 
   this.context.fillStyle = 'rgba(' + stripeColor + ', 0.5)';
   this.context.fillRect(0, offSetY, image.width, stripeHeight);
