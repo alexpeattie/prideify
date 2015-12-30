@@ -16,11 +16,15 @@ var Prideify = function(target, options) {
     })
   } else {
     this.options = options;
+    this.options.renderedClass = this.options.renderedClass || 'prideified';
+
     this.prideifyImage(target);
   }
 }
 
 Prideify.prototype.prideifyImage = function(image) {
+  if(image.classList.contains(this.options.renderedClass)) return;
+
   var tmpImage = new Image();
   tmpImage.crossOrigin = 'anonymous'
 
@@ -34,7 +38,7 @@ Prideify.prototype.prideifyImage = function(image) {
 
   tmpImage.onload = (function() {
     image.src = this.render(tmpImage)
-    image.classList.add(this.options.renderedClass || 'prideified');
+    image.classList.add(this.options.renderedClass);
 
     tmpImage = null;
     if(typeof this.options.afterRender === 'function') this.options.afterRender(image);
