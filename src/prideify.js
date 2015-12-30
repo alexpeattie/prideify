@@ -84,14 +84,30 @@ Prideify.prototype.addRainbow = function (image) {
 }
 
 Prideify.prototype.addStripe = function (image, stripeNum) {
-  var stripeHeight = image.height / stripes.length;
-
-  var offSetY = stripeNum * stripeHeight;
-  var stripeColor = stripes[stripeNum].join(', ')
   var stripes = this.stripes;
+  var stripeThickness = this._stripeThickness(image);
+  var stripePosition = stripeNum * stripeThickness;
+  var stripeColor = this.stripes[stripeNum].join(', ')
 
   this.context.fillStyle = 'rgba(' + stripeColor + ', 0.5)';
-  this.context.fillRect(0, offSetY, image.width, stripeHeight);
+  var rect = this._rectangle(stripePosition, stripeThickness, this._stripeLength(image))
+  this.context.fillRect.apply(this.context, rect);
+}
+
+Prideify.prototype._stripeLength = function (image) {
+  return this.options.vertical ? image.height : image.width;
+}
+
+Prideify.prototype._stripeThickness = function (image) {
+  return (this.options.vertical ? image.width : image.height) / this.stripes.length;
+}
+
+Prideify.prototype._rectangle = function (position, thickness, length) {
+  if(this.options.vertical) {
+    return [position, 0, thickness, length];
+  } else {
+    return [0, position, length, thickness];
+  }
 }
 
 if(window.jQuery) {
