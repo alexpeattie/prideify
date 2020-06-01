@@ -132,7 +132,7 @@ Prideify('.profile-pic', {
 
 The above would overlay two stripes - a black one, and a white one - admittedly not very exciting!
 
-#### `customStripes`
+#### `afterRender`
 
 - Type: `Function`
 - Default: `undefined`
