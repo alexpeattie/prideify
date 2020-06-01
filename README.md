@@ -92,7 +92,7 @@ Pridefy([target] [, options]);
 
 #### `target`
 
-- Type: `Element`, `Element[]`, jQuery collection or `String` (selector)
+- Type: `Element`, `Array[Element]`, jQuery collection or `String` (selector)
 - Default: `'[date-prideify]'`
 
 The image or collection of images you want to prideify. Alternatively you can pass a selector, in which case anything matching the selector will be prideified.
